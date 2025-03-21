@@ -1,0 +1,25 @@
+{
+  "name": "fullstack_open_part3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikhailErnstovich/fullstack_open_part3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikhailErnstovich/fullstack_open_part3/issues"
+  },
+  "homepage": "https://github.com/MikhailErnstovich/fullstack_open_part3#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  }
+}
