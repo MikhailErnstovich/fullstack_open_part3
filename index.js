@@ -4,9 +4,18 @@ const morgan = require("morgan");
 const app = express();
 app.use(express.json());
 
-morgan.token("post-data", (req, res) => req.method.toLowerCase() === 'post' ? `body: ${JSON.stringify(req.body)}` : '');
-app.use(morgan(":method :url :status :res[content-length] - :response-time ms :post-data"));
- 
+morgan.token("post-data", (req, res) =>
+  req.method.toLowerCase() === "post" ? `body: ${JSON.stringify(req.body)}` : ""
+);
+
+app.use(
+  morgan(
+    ":method :url :status :res[content-length] - :response-time ms :post-data"
+  )
+);
+
+app.use(express.static("dist"));
+
 let persons = [
   {
     id: "1",
@@ -89,7 +98,7 @@ app.post("/api/persons", (request, response) => {
       const id = `${Math.floor(Math.random() * 9007199254740991)}`;
       const person = { id, name, number };
       persons.push(person);
-      response.status(201).end();
+      response.status(201).json(person).end();
     }
   }
 });
