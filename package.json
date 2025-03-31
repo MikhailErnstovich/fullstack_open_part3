@@ -19,7 +19,10 @@
   "homepage": "https://github.com/MikhailErnstovich/fullstack_open_part3#readme",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.0",
     "morgan": "^1.10.0"
   }
 }
